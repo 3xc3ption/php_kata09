@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<phpunit bootstrap="autoloader.php"
+         colors="true"
+         verbose="true"
+         convertErrorsToExceptions="true"
+         convertNoticesToExceptions="true"
+         convertWarningsToExceptions="true"
+         processIsolation="false"
+         stopOnFailure="false"
+>
+    <testsuite name="Checkout Tests">
+        <directory suffix="Test.php">tests</directory>
+    </testsuite>
+    <filter>
+        <whitelist addUncoveredFilesFromWhitelist="true">
+            <directory>src</directory>
+        </whitelist>
+    </filter>
+
+    <logging>
+        <log type="junit" target="build/logs/junit.xml"/>
+        <!--<log type="coverage-html" target="build/coverage" title="checkout"-->
+             <!--charset="UTF-8" yui="true" highlight="true"-->
+             <!--lowUpperBound="35" highLowerBound="70"/>-->
+        <!--<log type="coverage-text" target="build/coverage.txt"/>-->
+        <!--<log type="coverage-php" target="build/logs/coverage.serialized"/>-->
+        <!--<log type="coverage-crap4j" target="build/logs/crap4j.xml"/>-->
+        <!--<log type="coverage-clover" target="build/logs/clover.xml"/>-->
+        <!--<log type="coverage-text" target="php://stdout"/>-->
+    </logging>
+</phpunit>
